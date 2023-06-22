@@ -1,0 +1,135 @@
+@import "../../styles/content.scss";
+
+.container {
+  .weatherCard {
+    display: flex;
+    gap: 1rem;
+
+    .reportCard {
+      background-color: #f4f4f4;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      justify-self: center;
+      flex-direction: row;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &.expanded {
+        display: none;
+        width: 300px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .lowerSection {
+      display: none;
+      gap: 1.5rem;
+      box-sizing: border-box;
+      overflow: hidden;
+      transition: all 0.5s ease;
+
+      &.expanded {
+        display: flex;
+      }
+
+      .weather_card {
+        border-radius: 1.5rem;
+        background: rgb(247, 244, 241);
+        transition: all 0.7s ease-out;
+        cursor: pointer;
+        width: 28rem;
+        margin: 1.5rem 0rem;
+
+        .dayTime {
+          display: flex;
+          padding: 1rem 1.4rem;
+          position: relative;
+          justify-content: space-between;
+          font-family: $text-rubik;
+          font-size: 1.3rem;
+          font-weight: 600;
+          background-color: aqua;
+          border-radius: 1.5rem 1.5rem 0 0;
+        }
+
+        .days {
+          align-items: center;
+          text-align: center;
+          font-size: 1.3rem;
+        }
+
+        .day {
+          padding: 1rem;
+          position: relative;
+          display: block;
+          font-family: $text-rubik;
+          font-size: 1.4rem;
+          font-weight: 600;
+          background-color: aqua;
+          border-radius: 1.5rem 1.5rem 0 0;
+        }
+
+        .weatherDetail {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column-reverse;
+          padding: 0.9rem 0rem;
+        }
+
+        .temp {
+          font-family: $text-baloo2;
+          font-size: 3.5rem;
+          font-weight: 700;
+        }
+
+        .weather_detail {
+          display: flex;
+          flex-direction: column;
+          padding: 1rem 1.4rem;
+        }
+
+        .leftSection {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .description {
+            font-family: $text-raleway;
+            justify-content: center;
+            text-align: center;
+            margin: 0;
+          }
+        }
+
+        img {
+          width: 120px;
+        }
+
+        .rightSection {
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 0.8rem;
+          gap: 1rem;
+
+          .details {
+            font-family: $text-raleway;
+            color: #9c9c9c;
+            margin-right: 0.3rem;
+            font-size: 1rem;
+          }
+
+          .content {
+            font-family: $text-poppins;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}

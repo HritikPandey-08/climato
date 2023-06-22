@@ -1,0 +1,45 @@
+.weather-card {
+    width: 300px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #ccc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .card-header h2 {
+    margin: 0;
+    color: #fff;
+  }
+  
+  .card-content {
+    padding: 10px;
+    display: none;
+  }
+  
+  .toggle-btn {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .toggle-btn:focus {
+    outline: none;
+  }
+  
+  .card-content.show {
+    display: block;
+  }
+  
