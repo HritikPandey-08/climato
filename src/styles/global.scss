@@ -1,0 +1,124 @@
+@import "./content.scss";
+
+.bg_primary {
+  background: #f1f0ee;
+}
+.heading {
+  font-family: "Rubik", sans-serif;
+  text-transform: capitalize;
+}
+.innerWidth {
+  @media (min-width: $xxl) {
+    max-width: 1280px;
+    margin: auto;
+  }
+
+  width: 100%;
+}
+
+.padding {
+  @media (min-width: $sm) {
+    padding: 3rem;
+  }
+
+  @media (min-width: $xl), (min-width: $md) {
+    padding-top: 1.7rem;
+    padding-bottom: 1.7rem;
+  }
+
+  padding: 1.3rem;
+}
+
+.xPaddings {
+  @media (min-width: $sm) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  padding-left: 1.2rem;
+  /* 24px */
+  padding-right: 1.2rem;
+  /* 24px */
+}
+
+.yPaddings {
+  @media (min-width: $sm) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @media (min-width: $xl) {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.topPaddings {
+  @media (min-width: $sm) {
+    padding-top: 4rem;
+  }
+
+  @media (min-width: $xl) {
+    padding-top: 2rem;
+  }
+
+  padding-top: 2.5rem;
+}
+
+.bottomPaddings {
+  @media (min-width: $sm) {
+    padding-bottom: 4rem;
+  }
+
+  @media (min-width: $xl) {
+    padding-bottom: 2rem;
+  }
+
+  padding-bottom: 3rem;
+}
+
+// .flexCenter {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .flexStart {
+//   display: flex;
+//   justify-content: start;
+//   align-items: center;
+// }
+
+// .flexEnd {
+//   display: flex;
+//   justify-items: end;
+// }
+
+.primaryText {
+  @media (max-width: $sm) {
+    font-size: 2.5rem;
+  }
+  font-size: 3rem;
+  font-weight: bold;
+  color: #0d2f3f;
+}
+
+.secondaryText {
+  @media (max-width: $sm) {
+    font-size: 1.1rem;
+    line-height: 40px;
+  }
+  line-height: 50px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #0d2f3f;
+}
+.anchor {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
