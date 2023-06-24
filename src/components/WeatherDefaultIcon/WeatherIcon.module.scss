@@ -1,0 +1,47 @@
+@import "../../styles/content.scss";
+
+
+.default_message {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  .bgImage {
+    position: fixed; /* Use fixed positioning to prevent scrolling */
+    background-image: url("../../../public/icons/landscape.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:100vw;
+    height: 100vh; /* Use viewport height to make it full-screen */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 25px;
+    gap: 2rem;
+    z-index: 1;
+
+    .icons {
+      background-color: #000;
+      border-radius: 20px;
+      opacity: .6;      
+      width: 200px;
+      /* Add position: absolute and bottom: 0 to overlay the icons at the bottom */
+      position: absolute;
+      top:5%;
+    }
+    .message{
+      h3{
+      font-family: $text_rubik;
+      font-weight: 600;
+    }
+    span{
+      font-family: $text_poppins;
+    }
+  }
+  }
+}
+

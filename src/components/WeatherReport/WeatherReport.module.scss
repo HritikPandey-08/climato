@@ -1,13 +1,10 @@
 @import "../../styles/content.scss";
 
 .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .upperSection {
-    display: flex;
-    justify-content: space-between;
-    font-family: $text-baloo2;
-    font-size: 1.4rem;
-    align-items: center;
-
     .days {
       display: flex;
       gap: 1rem;
@@ -15,18 +12,15 @@
   }
 
   .lowerSection {
-    display: flex;
     gap: 1.5rem;
-    box-sizing: border-box;
     overflow: hidden;
-    transition: all 0.5s ease;
 
     .weather_card {
       border-radius: 1.5rem;
       background: rgb(247, 244, 241);
       transition: all 0.7s ease-out;
       cursor: pointer;
-      width: 28rem;
+      max-width: 25rem;
       margin: 1.5rem 0rem;
 
       .dayTime {
