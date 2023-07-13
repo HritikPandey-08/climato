@@ -3,9 +3,8 @@
 .header{
     background-color: aliceblue;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0;
-    gap: 2rem;
     .leftSide{
         display: flex;
         gap:2rem;
@@ -53,7 +52,6 @@
         .roundedIcon {
             border-radius: 20px;
             margin-left: -40px; /* Adjust the margin as needed to position the icon */
-            padding: 5px;
           }
     }
     .rightSide{

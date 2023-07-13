@@ -2,7 +2,7 @@
   text-align: center;
 }
 .bg{
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   background-image: url("../public/icons/tree.jpg");
   background-size: cover;
   background-position: center;
