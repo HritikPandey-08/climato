@@ -42,14 +42,24 @@
     }
     .center{
         display: flex;
+        justify-content: center;
         align-items: center;
         .roundedInput{
             border-radius: 20px;
             padding:10px 14px;
             min-width: 350px;
             margin: auto;
+            border: 1px solid #fff;
+            font-family:  $text-poppins;
+            &:focus{
+                border:none;
+            }
+            &:active{
+                border:none;
+            }
         }
         .roundedIcon {
+            
             border-radius: 20px;
             margin-left: -40px; /* Adjust the margin as needed to position the icon */
           }

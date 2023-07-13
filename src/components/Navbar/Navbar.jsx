@@ -40,9 +40,9 @@ function Navbar({ onSearchChange }) {
           />
           {/* Search bar icon */}
           {search === "" && (
-            <button className={css.roundedIcon}>
+            <span className={css.roundedIcon}>
               <FontAwesomeIcon icon={faMagnifyingGlass} className="mx-2" />
-            </button>
+            </span>
           )}
         </div>
       </div>
