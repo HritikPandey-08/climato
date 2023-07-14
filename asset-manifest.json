@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/climato/static/css/main.23d5f553.css",
-    "main.js": "/climato/static/js/main.d97e18b5.js",
+    "main.js": "/climato/static/js/main.0a25e780.js",
     "static/js/787.f0b03592.chunk.js": "/climato/static/js/787.f0b03592.chunk.js",
     "static/media/tree.jpg": "/climato/static/media/tree.244ff4be7ad5b3f568ad.jpg",
     "static/media/landscape.webp": "/climato/static/media/landscape.715e20e44b0dfc8c556c.webp",
     "index.html": "/climato/index.html",
     "main.23d5f553.css.map": "/climato/static/css/main.23d5f553.css.map",
-    "main.d97e18b5.js.map": "/climato/static/js/main.d97e18b5.js.map",
+    "main.0a25e780.js.map": "/climato/static/js/main.0a25e780.js.map",
     "787.f0b03592.chunk.js.map": "/climato/static/js/787.f0b03592.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.23d5f553.css",
-    "static/js/main.d97e18b5.js"
+    "static/js/main.0a25e780.js"
   ]
 }
