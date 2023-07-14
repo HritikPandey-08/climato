@@ -7,7 +7,7 @@ function WeatherIcon(props) {
     <div className={css.default_message}>
       <div className={css.bgImage}>
         <div className={css.icons}>
-          <img src={imagePath+`weatherIcons.gif`} alt="icon" />
+          <img src={imagePath + `weathericon.gif`} alt="icon" />
         </div>
         <div className={css.message}>
           <h3>{props.errorMessage}</h3>
