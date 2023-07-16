@@ -8,6 +8,7 @@ import {
   WEATHER_API_KEY,
   CURRENT_WEATHER_URL,
   FORECAST_WEATHER_URL,
+  GEO_CODING,
 } from "./utils/api";
 import WeatherIcon from "./components/WeatherDefaultIcon/WeatherIcon";
 
@@ -28,6 +29,7 @@ function App() {
     const fetchWeatherData = async () => {
       let url;
       let forecastUrl;
+      let geocodingResponse;
 
       try {
         if (searchValue && searchValue.trim() !== "") {
@@ -39,8 +41,21 @@ function App() {
           });
 
           const { latitude, longitude } = position.coords;
+          // const latitude = position.coords.latitude.toFixed(4);
+          // const longitude = position.coords.longitude.toFixed(4);
           forecastUrl = `${FORECAST_WEATHER_URL}lat=${latitude}&lon=${longitude}&units=metric&appid=${WEATHER_API_KEY}`;
-          url = `${CURRENT_WEATHER_URL}lat=${latitude}&lon=${longitude}&units=metric&appid=${WEATHER_API_KEY}`;
+          geocodingResponse = await fetch(
+            `${GEO_CODING}lat=${latitude}&lon=${longitude}&limit=1&appid=${WEATHER_API_KEY}`
+          );
+          const geocodingData = await geocodingResponse.json();
+
+          if (geocodingData.length > 0) {
+            const city = geocodingData[0].name;
+            const state = geocodingData[0].state;
+            url = `${CURRENT_WEATHER_URL}q=${city},${state}&units=metric&appid=${WEATHER_API_KEY}`;
+          }
+          // console.log(longitude);
+          // console.log(latitude);
         }
 
         const weatherResponse = await fetch(url);
@@ -57,7 +72,6 @@ function App() {
 
         const report = await weatherResponse.json();
         const forecastreport = await forecastResponse.json();
-
         setCurrentWeathers(report);
         setForecast(forecastreport);
         setIsLocationOrCityAvailable(true);

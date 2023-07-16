@@ -35,7 +35,7 @@ function WeatherReport({ data }) {
     <div className={`${css.container} padding`}>
       <div className={css.lowerSection}>
         {/* Weather card */}
-        { data && data.main && data.weather && data.weather[0]  ? 
+        { data && data.main ? 
         (
           <div>
             <div className={`${css.weather_card}`} id="weather_card">
