@@ -7,7 +7,7 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion";
-// import { imagePath } from "../../utils/iconsPath";
+import { imagePath } from "../../utils/iconsPath";
 
 function WeatherForecast({data}) {
   // const [expanded, setExpanded] = useState(false);
@@ -44,7 +44,7 @@ function WeatherForecast({data}) {
             <AccordionItemHeading>
               <AccordionItemButton>
                 <div className={css.daily_item}>
-                  <img src={`icons/${item.weather[0].icon}.png`} className={css.icon_small} alt="weather" />
+                  <img src={`${imagePath}`+`${item.weather[0].icon}.png`} className={css.icon_small} alt="weather" />
                   <label className={css.day}>{forecastDays[idx]}</label>
                   <label className={css.description}>{item.weather[0].description}</label>
                   <label className={css.min_max}>{Math.round(item.main.temp_max)}°C /{Math.round(item.main.temp_min)}°C</label>
